@@ -13,8 +13,8 @@ namespace SearchBadWords
                 .Select(a => new
                 {
                     word = a.Key,
-                    sumWords = a.Sum(ab=>ab.CountWords)
-                }).OrderByDescending(s=>s.sumWords).ToList();
+                    sumWords = a.Sum(ab => ab.CountWords)
+                }).OrderByDescending(s => s.sumWords).ToList();
 
         }
     }

@@ -134,7 +134,7 @@ namespace SearchBadWords
             {
                 progressBar_Files.Value = 0;
                 listBox_Files.Items.Clear();
-                button_Statistics.Visible = false;
+                button_Statistics.Visible = true;
                 progressBar_Files.Visible = true;
                 label_CurrentFile.Visible = true;
 
@@ -199,7 +199,7 @@ namespace SearchBadWords
                         int countWordsFound = 0;
                         FileInfo fi = null;
 
-                        string[] str = File.ReadAllLines(fi.FullName);
+                        string[] str = File.ReadAllLines(file.FullName);
                         UpdateLable(file.FullName);
 
                         foreach (string word in words)

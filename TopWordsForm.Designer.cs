@@ -36,6 +36,7 @@
             // dataGridView_TopWords
             // 
             dataGridView_TopWords.BackgroundColor = SystemColors.Control;
+            dataGridView_TopWords.BorderStyle = BorderStyle.None;
             dataGridView_TopWords.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_TopWords.Dock = DockStyle.Fill;
             dataGridView_TopWords.Location = new Point(0, 0);

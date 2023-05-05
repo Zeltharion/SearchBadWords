@@ -40,6 +40,7 @@
             button_Search = new Button();
             toolTip1 = new ToolTip(components);
             label_PathSave = new Label();
+            label_Info = new Label();
             SuspendLayout();
             // 
             // treeView_Directories
@@ -67,12 +68,13 @@
             label_CurrentFile.Size = new Size(69, 15);
             label_CurrentFile.TabIndex = 2;
             label_CurrentFile.Text = "Current file:";
+            label_CurrentFile.Visible = false;
             // 
             // listBox_Files
             // 
             listBox_Files.FormattingEnabled = true;
             listBox_Files.ItemHeight = 15;
-            listBox_Files.Location = new Point(228, 12);
+            listBox_Files.Location = new Point(228, 36);
             listBox_Files.Name = "listBox_Files";
             listBox_Files.Size = new Size(654, 214);
             listBox_Files.TabIndex = 3;
@@ -82,7 +84,7 @@
             button_SaveIn.BackColor = Color.FromArgb(255, 255, 192);
             button_SaveIn.FlatAppearance.BorderColor = Color.Silver;
             button_SaveIn.FlatStyle = FlatStyle.Flat;
-            button_SaveIn.Location = new Point(228, 240);
+            button_SaveIn.Location = new Point(228, 256);
             button_SaveIn.Name = "button_SaveIn";
             button_SaveIn.Size = new Size(215, 30);
             button_SaveIn.TabIndex = 4;
@@ -97,9 +99,9 @@
             button_Filter.BackColor = Color.FromArgb(255, 255, 192);
             button_Filter.FlatAppearance.BorderColor = Color.Silver;
             button_Filter.FlatStyle = FlatStyle.Flat;
-            button_Filter.Location = new Point(449, 240);
+            button_Filter.Location = new Point(449, 256);
             button_Filter.Name = "button_Filter";
-            button_Filter.Size = new Size(215, 30);
+            button_Filter.Size = new Size(226, 30);
             button_Filter.TabIndex = 5;
             button_Filter.Text = "Filter words...";
             button_Filter.UseVisualStyleBackColor = false;
@@ -110,12 +112,13 @@
             button_Statistics.BackColor = Color.Lime;
             button_Statistics.FlatAppearance.BorderColor = Color.Silver;
             button_Statistics.FlatStyle = FlatStyle.Flat;
-            button_Statistics.Location = new Point(670, 390);
+            button_Statistics.Location = new Point(0, 431);
             button_Statistics.Name = "button_Statistics";
-            button_Statistics.Size = new Size(215, 30);
+            button_Statistics.Size = new Size(209, 30);
             button_Statistics.TabIndex = 6;
             button_Statistics.Text = "Statistics";
             button_Statistics.UseVisualStyleBackColor = false;
+            button_Statistics.Visible = false;
             button_Statistics.Click += button_Statistics_Click;
             // 
             // button_Search
@@ -123,9 +126,9 @@
             button_Search.BackColor = Color.FromArgb(255, 255, 192);
             button_Search.FlatAppearance.BorderColor = Color.Silver;
             button_Search.FlatStyle = FlatStyle.Flat;
-            button_Search.Location = new Point(670, 240);
+            button_Search.Location = new Point(681, 256);
             button_Search.Name = "button_Search";
-            button_Search.Size = new Size(215, 30);
+            button_Search.Size = new Size(201, 30);
             button_Search.TabIndex = 7;
             button_Search.Text = "Search";
             button_Search.UseVisualStyleBackColor = false;
@@ -139,11 +142,21 @@
             label_PathSave.Size = new Size(0, 15);
             label_PathSave.TabIndex = 8;
             // 
-            // Form1
+            // label_Info
+            // 
+            label_Info.AutoSize = true;
+            label_Info.Location = new Point(228, 18);
+            label_Info.Name = "label_Info";
+            label_Info.Size = new Size(106, 15);
+            label_Info.TabIndex = 9;
+            label_Info.Text = "Found word paths:";
+            // 
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(894, 461);
+            Controls.Add(label_Info);
             Controls.Add(label_PathSave);
             Controls.Add(button_Search);
             Controls.Add(button_Statistics);
@@ -154,8 +167,8 @@
             Controls.Add(progressBar_Files);
             Controls.Add(treeView_Directories);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
-            Text = "Form1";
+            Name = "MainForm";
+            Text = "Search Bad Words";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -172,5 +185,6 @@
         private Button button_Search;
         private ToolTip toolTip1;
         private Label label_PathSave;
+        private Label label_Info;
     }
 }
